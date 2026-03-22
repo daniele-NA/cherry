@@ -8,7 +8,7 @@
 
     <application
         android:icon="@mipmap/mpm_ic"
-        android:label="Cherry"
+        android:label="Snake"
         android:roundIcon="@mipmap/mpm_ic"
         android:supportsRtl="true"
         android:theme="@style/SplashTheme">
@@ -23,7 +23,7 @@
 
             <meta-data
                 android:name="android.app.lib_name"
-                android:value="cherry" /></activity>
+                android:value="snake" /></activity>
 
     </application>
 

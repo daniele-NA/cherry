@@ -12,7 +12,7 @@ plugins {
 }
 
 android {
-    namespace = "me.app.cherry"
+    namespace = "me.app.snake"
     ndkVersion = "29.0.14206865"
 
     compileSdk {
@@ -22,7 +22,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "me.app.cherry"
+        applicationId = "me.app.snake"
         minSdk = 30
         targetSdk = 36
         versionCode = 1

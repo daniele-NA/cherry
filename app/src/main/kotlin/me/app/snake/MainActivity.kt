@@ -1,4 +1,4 @@
-package me.app.cherry
+package me.app.snake
 
 import android.os.Bundle
 import android.view.View
