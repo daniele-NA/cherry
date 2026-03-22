@@ -14,6 +14,7 @@ struct s_renderer {
     bool is_ready;
 
     GLuint program;
+    GLint color_loc;  // uniform location for u_color
     GLuint vao;   // describes vertex data format
     GLuint vbo;   // uploads vertices to GPU
     GLuint ebo;   // avoids duplicating vertices for indexed drawing

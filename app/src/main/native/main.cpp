@@ -49,6 +49,24 @@ extern "C" void android_main(struct android_app *pt_app) {
                 }
         }
 
+        android_input_buffer *input = android_app_swap_input_buffers(pt_app);
+        if (input) {
+            for (int i = 0; i < input->motionEventsCount; i++) {
+                GameActivityMotionEvent *event = &input->motionEvents[i];
+                float x = GameActivityPointerAxes_getX(&event->pointers[0]);
+                float y = GameActivityPointerAxes_getY(&event->pointers[0]);
+                LOG_I("Touch: %.0f, %.0f", x, y);
+            }
+            android_app_clear_motion_events(input);
+
+            for (int i = 0; i < input->keyEventsCount; i++) {
+                GameActivityKeyEvent *event = &input->keyEvents[i];
+                LOG_I("Key: %d", event->keyCode);
+            }
+            android_app_clear_key_events(input);
+        }
+
+
         renderer_draw();
     }
 }
